@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    background-color: rgba(137, 43, 226, 0.485);
+}
+.container{
+    background-color: white;
+    height: 100vh;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.container ul{
+    position: absolute;
+    top: 100px;
+    width: 250px;
+}
+.container li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    list-style: none;
+}
+.icon{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+.text{
+    border-radius: 10px;
+    width: 60%;
+    height: 2rem;
+}
+
+.navBtn{
+    border: none;
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+}

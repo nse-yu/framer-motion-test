@@ -1,9 +1,20 @@
+import { LayoutGroupContext } from "framer-motion";
 import Motion1 from "./components/Motion1";
 import Motion10 from "./components/Motion10";
 import Motion11 from "./components/Motion11";
 import Motion12 from "./components/Motion12";
 import Motion13 from "./components/Motion13";
+import Motion14 from "./components/Motion14";
+import Motion15 from "./components/Motion15";
+import Motion16 from "./components/Motion16";
+import Motion17 from "./components/Motion17";
+import Motion18 from "./components/Motion18";
+import Motion19 from "./components/Motion19";
 import Motion2 from "./components/Motion2";
+import Motion20 from "./components/Motion20";
+import Motion21 from "./components/Motion21";
+import Motion23 from "./components/Motion23";
+import Motion24 from "./components/Motion24";
 import Motion3 from "./components/Motion3";
 import Motion4 from "./components/Motion4";
 import Motion5 from "./components/Motion5";
@@ -49,7 +60,17 @@ function App() {
       <Motion10 />
       <Motion11 design={Mdiv} />
       <Motion12 design={Mdiv} />
-      <Motion13 design={Mdiv}/>
+      <Motion13 design={Mdiv} child={child}/>
+      <Motion14 design={Mdiv} />
+      <Motion15 />
+      <Motion16 />
+      <Motion17 />
+      <Motion18 />
+      <Motion19 />
+      <Motion20 />
+      <Motion21 />
+      <Motion23 />
+      <Motion24 />
     </div>
   );
 }
