@@ -1,16 +1,14 @@
 @charset "UTF-8";
 
-body{
-    
-}
 .div_module{
     background-color: rgb(72, 255, 0);
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    text-align: center;
 }
 body{
-    background-color: antiquewhite;
+    background-color: rgb(205, 112, 236);
 }
 
 .div_module2{
@@ -80,6 +78,59 @@ body{
     padding: 20px;
     /*background-color: #7700ff;*/
 }
-p{
-    background-color: rgb(166, 255, 0);
+
+
+.gradient1{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background: linear-gradient(#ff0000, #0000ff, #ffff00);
+}
+.gradient2{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background: linear-gradient(0.25turn, #ff0000, #0000ff, #ffff00);
+}
+.gradient3{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background: linear-gradient(45deg, #ff0000, #0000ff, #ffff00);
+}
+.gradient4{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background: linear-gradient(to left top, #ff0000, #0000ff, #ffff00);
+}
+.gradient5{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background: linear-gradient(45deg, #ff0000, 50%, #0000ff, #ffff00);
+}
+.gradient6{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background: linear-gradient(45deg, red 0 50%, blue 50% 100%);
+}
+.gradient7{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background: linear-gradient(red 10%, 30%, blue 90%);
+}
+.gradient8{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background: linear-gradient(to right,red 20%, orange 20% 40%, yellow 40% 60%, green 60% 80%, blue 80%);
+}
+.gradient9{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background: linear-gradient(135deg, orange 60%, cyan);
 }
