@@ -28,6 +28,13 @@ import ColorList from "./components/practice/ColorList";
 import AddColorForm from "./components/practice/AddColorForm";
 import ColorProvider from "./components/practice/ColorProvider";
 import style from "../src/css/style.module.css"
+import Checkbox from "./components/practice/Checkbox";
+import WebRequest from "./components/practice/WebRequest";
+import faker from "@faker-js/faker"
+import {FixedSizeList} from "react-window"
+import GithubUser from "./components/github/GithubUser";
+import HogeProvider from "./components/github/HogeProvider";
+
 
 function App() {
   
@@ -51,6 +58,24 @@ function App() {
     margin: "10px",
     borderRadius: "50%"
   }
+  const bigList = [...Array(5000)].map(() => ({
+    name:faker.name.findName(),
+    email:faker.internet.email(),
+    avatar:faker.internet.avatar()
+  })) 
+
+  const renderRow = ({index,style}) => (
+    <div style={{...style,...{display:"flex"}}}>
+      <img 
+        src={bigList[index].avatar}
+        alt={bigList[index].name}
+        width={50}
+      />
+      <p>
+        {bigList[index].name} - {bigList[index].email}
+      </p>
+    </div>
+  )
 
 
   return (
@@ -85,6 +110,19 @@ function App() {
         <AddColorForm/>
         <ColorList/>
       </ColorProvider>
+      <Checkbox />
+      <WebRequest />
+      <FixedSizeList 
+        height={window.innerHeight}
+        width={window.innerWidth - 20}
+        itemCount={bigList.length}
+        itemSize={50}
+      >     
+      {renderRow}
+      </FixedSizeList>
+      <HogeProvider >
+        <GithubUser login={"nse-yu"}/>
+      </HogeProvider>
     </div>
   );
 }

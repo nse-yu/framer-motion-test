@@ -17,8 +17,9 @@ export default function Motion7(props) {
     }
 
     return (
-        array.map(item => {
+        array.map((item,index) => {
             return <motion.div
+                key={index}
                 style={props.child}
                 variants={functionalVariants}
                 custom={item}

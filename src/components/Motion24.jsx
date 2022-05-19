@@ -7,8 +7,12 @@ export default function Motion24() {
     const y = useMotionValue(0);
     const gradation = useTransform(y,[0,-500],["#e6e6fa","#00bfff"])
     useEffect(() => {
-        y.onChange(latest => {console.log(latest)})
-        opacity.onChange(latest => {console.log(latest)})
+        y.onChange(latest => {
+            //console.log(latest)
+        })
+        opacity.onChange(latest => {
+            //console.log(latest)
+        })
     },[])
 
     return (

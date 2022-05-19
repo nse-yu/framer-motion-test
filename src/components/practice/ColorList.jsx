@@ -1,9 +1,8 @@
-import { useContext } from "react"
-import { ColorContext } from "./ColorProvider"
+import { useColors } from "./ColorProvider"
 import Color from "./Color"
 
 export default function ColorList() {
-    const {colors,removeColor} = useContext(ColorContext)
+    const {colors,removeColor} = useColors()
     
     return (
         <section style={{padding:"2rem"}}>

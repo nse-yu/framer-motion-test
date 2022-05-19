@@ -1,12 +1,12 @@
 import {useCycle} from "framer-motion";
 import {motion} from "framer-motion";
 
-const Star = ({clicked = () => {console.log("none function")},key}) => {
+const Star = ({clicked = () => {console.log("none function")},props}) => {
     const [isStarred,cycleStarred] = useCycle(false,true)
 
     return (
         <motion.svg 
-            key={key}
+            {...props}
             width="40" height="40" viewBox="0 0 40 40" 
             stroke="yellow" 
             initial={{scale:1,opacity:0.6}}

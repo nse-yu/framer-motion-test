@@ -12,8 +12,8 @@ export default function Motion27({num = 5}) {
             <section style={{display:"flex",alignItems:"center"}}>
                 <div>
                     {
-                        [...Array(num)].map((n) => (
-                            <Star key={n} clicked={selected}/>
+                        [...Array(num)].map((n,index) => (
+                            <Star key={index} clicked={selected}/>
                         ))
                     }
                 </div>
