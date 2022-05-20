@@ -1,19 +1,17 @@
 import { useEffect } from "react";
 import { useIterator } from "../hooks/useIterator";
-import { useHoge } from "./HogeProvider";
-import RepositoryReadme from "./RepositoryReadme";
+import { useGitInfo } from "./GitInfoProvider";
 
 export default function RepoMenu({
-    repositories,
-    login
+    repositories
 }) {
     //repository一覧のjsonからname属性のみ取り出す
     const [{name},pre,next] = useIterator(repositories,0)
-    const {onSelect} = useHoge()
+    const {updateRepo} = useGitInfo()
   
     useEffect(() => {
         if(!name) return 
-        onSelect(name)
+        updateRepo(name)
     },[name])
 
     return (
@@ -23,7 +21,6 @@ export default function RepoMenu({
                 <p>repos_name: <mark> {name} </mark></p>
                 <button onClick={next}>後</button>
             </div>
-            <RepositoryReadme login={login} repo={name} />
         </>
     )
 }

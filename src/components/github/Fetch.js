@@ -1,6 +1,6 @@
 import { useFetch } from "../hooks/useFetch";
 import PropTypes from "prop-types"
-import { useHoge } from "./HogeProvider";
+import { useHoge } from "./GitInfoProvider";
 
 export const Fetch = ({
     uri,

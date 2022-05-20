@@ -1,11 +1,9 @@
 import { Fetch } from "./Fetch"
-import HogeProvider from "./HogeProvider"
 import RepoMenu from "./RepoMenu"
 
 export default function UserRepository({
     login
 }) {
-    
     return (
         <>
             <Fetch 
@@ -13,7 +11,6 @@ export default function UserRepository({
                 renderSuccess={data => (
                     <RepoMenu 
                         repositories={data}
-                        login={login}
                     />
                 )}
             />

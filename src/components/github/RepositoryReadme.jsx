@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import { useCallback,useState,useEffect } from "react";
+import { useMountedRef } from "../hooks/useMountedRef";
 
 export default function RepositoryReadme({
     repo,login
@@ -7,6 +8,7 @@ export default function RepositoryReadme({
     const [loading,setLoading] = useState(true)
     const [error,setError] = useState()
     const [markdown,setMarkdown] = useState("")
+    const mounted = useMountedRef()
 
     /**
      * async付きメソッドで非同期処理を有効化し、準備完了したらawait付きfetchでデータ取得
@@ -16,7 +18,8 @@ export default function RepositoryReadme({
         const {download_url} = await fetch(uri).then(res => res.json()) //README.mdファイルのダウンロードURLを抽出
 
         const markdown = await fetch(download_url).then(res => res.text())//README.mdファイルの内容をダウンロード
-        setMarkdown(markdown)
+        if(!mounted.current) return 
+        setMarkdown(markdown) //コンポーネントのマウント時のみ実行
         setLoading(false)
     },[])
 

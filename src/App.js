@@ -32,8 +32,8 @@ import Checkbox from "./components/practice/Checkbox";
 import WebRequest from "./components/practice/WebRequest";
 import faker from "@faker-js/faker"
 import {FixedSizeList} from "react-window"
-import GithubUser from "./components/github/GithubUser";
-import HogeProvider from "./components/github/HogeProvider";
+import GitInfoProvider from "./components/github/GitInfoProvider";
+import GitRoot from "./components/github/GitRoot";
 
 
 function App() {
@@ -120,9 +120,9 @@ function App() {
       >     
       {renderRow}
       </FixedSizeList>
-      <HogeProvider >
-        <GithubUser login={"nse-yu"}/>
-      </HogeProvider>
+      <GitInfoProvider>
+        <GitRoot />
+      </GitInfoProvider>
     </div>
   );
 }
